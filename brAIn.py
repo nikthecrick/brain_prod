@@ -1,3 +1,12 @@
+# ----------------------------------------------------------------------
+# brAIn
+# Created by: Nik Niksen
+# This script initiates a conversation between different parts of the human mind
+# and displays it. It also saves the conversation to a text file.
+#
+# Copyright (c) 2023 Nik Niksen. All rights reserved.
+# ----------------------------------------------------------------------
+
 import autogen
 import io
 import json
@@ -25,7 +34,7 @@ def initiate_and_save_conversation():
     ]
 
     gpt4_config = {
-        "seed": 42,
+        "seed": 37,
         "temperature": 0.7,
         "config_list": config_list_gpt3,
         "max_retry_period": 1000,
