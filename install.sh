@@ -18,20 +18,20 @@ if [ $? -eq 0 ]; then
     cd $INSTALL_DIR
 
     # Install the requirements (assuming you have pip installed)
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
 
     # Make the Python script executable
     chmod +x brAIn.py
 
     # Copy the script to the bin directory (requires sudo)
-    sudo cp brain.py $BIN_DIR
+    # sudo cp brain.py $BIN_DIR
 
     # Check if the copy was successful
-    if [ $? -eq 0 ]; then
-        echo "Installation complete. You can now run 'brain.py' from anywhere."
-    else
-        echo "Failed to copy the script to $BIN_DIR. Please make sure you have sudo privileges."
-    fi
-else
-    echo "Failed to clone the repository. Please check the repository URL or your internet connection."
+    # if [ $? -eq 0 ]; then
+    #     echo "Installation complete. You can now run 'brain.py' from anywhere."
+    # else
+    #     echo "Failed to copy the script to $BIN_DIR. Please make sure you have sudo privileges."
+    # fi
+# else
+    # echo "Failed to clone the repository. Please check the repository URL or your internet connection."
 fi
