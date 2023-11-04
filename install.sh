@@ -21,14 +21,14 @@ if [ $? -eq 0 ]; then
     pip install -r requirements.txt
 
     # Make the Python script executable
-    chmod +x your_script.py
+    chmod +x brAIn.py
 
     # Copy the script to the bin directory (requires sudo)
-    sudo cp your_script.py $BIN_DIR
+    sudo cp brain.py $BIN_DIR
 
     # Check if the copy was successful
     if [ $? -eq 0 ]; then
-        echo "Installation complete. You can now run 'your_script.py' from anywhere."
+        echo "Installation complete. You can now run 'brain.py' from anywhere."
     else
         echo "Failed to copy the script to $BIN_DIR. Please make sure you have sudo privileges."
     fi
