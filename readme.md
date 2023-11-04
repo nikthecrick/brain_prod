@@ -13,8 +13,8 @@ To set up the project environment, please follow these steps:
 1. Clone this repository to your local machine.
 
    ```bash
-   git clone https://github.com/YourUsername/MindConversationAI.git
-   cd MindConversationAI
+   git clone https://github.com/YourUsername/brain_prod.git
+   cd brain_prod
    ```
 
 2. Create a virtual environment to isolate project dependencies.
