@@ -50,7 +50,7 @@ To set up the project environment, please follow these steps:
    ```bash
    pip3 install pygame
    pip3 install autogen
-   pip3 instal openai
+   pip3 install openai
    ```
 
 ## Usage
