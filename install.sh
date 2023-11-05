@@ -21,7 +21,7 @@ if [ $? -eq 0 ]; then
     pip3 install -r requirements.txt
 
     # Make the Python script executable
-    chmod +x brAIn.py
+    # chmod +x brAIn.py
 
     # Copy the script to the bin directory (requires sudo)
     # sudo cp brain.py $BIN_DIR

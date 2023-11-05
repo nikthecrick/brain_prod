@@ -4,7 +4,6 @@
 # This script initiates a conversation between different parts of the human mind
 # and displays it. It also saves the conversation to a text file.
 #
-# Copyright (c) 2023 Nik Niksen. All rights reserved.
 # ----------------------------------------------------------------------
 
 import autogen
@@ -29,7 +28,8 @@ def initiate_and_save_conversation():
     config_list_gpt3 = [
         {
             'model': 'gpt-3.5-turbo-16k',
-            'api_key': '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',
+            # enter your openAI API key here
+            'api_key': '',
         }
     ]
 
@@ -115,7 +115,7 @@ def get_user_input():
     text = ''
     
     # Message to display above the input field
-    intro_message = "Type in your first thought"  # Your introductory message
+    intro_message = "Type in your first thought. Which problem are you facing in your mind?"  # Your introductory message
     intro_font = pygame.font.Font(None, 24)
     intro_text = intro_font.render(intro_message, True, (255, 255, 255))
     
