@@ -74,7 +74,7 @@ Here's an example of how the `config.json` file should look:
 {
     "api_key": "sk-abcdefghijklmnopqrstuvwxyz123456"
 }
-
+```
 
 ## Usage
 
