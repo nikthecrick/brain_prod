@@ -1,0 +1,14 @@
+
+
+# Exclude virtual environments (Python)
+venv/
+.env/
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore operating system or editor files
+.DS_Store
+.idea/
+.vscode/
+__pycache__/

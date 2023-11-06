@@ -52,6 +52,29 @@ To set up the project environment, please follow these steps:
    pip3 install pyautogen
    pip3 install openai
    ```
+## OpenAI API Key Configuration
+
+Before you can run the project, you need to obtain an OpenAI API key and configure it in the `config.json` file included in the repository. Follow these steps:
+
+1. **Sign Up for OpenAI:**
+   - If you don't have an OpenAI account, you can sign up for one on the [OpenAI website](https://beta.openai.com/signup/).
+
+2. **Get Your API Key:**
+   - After signing up and logging in to OpenAI, navigate to your dashboard to find your API key. It will look something like this:
+     ```
+     api_key = 'sk-abcdefghijklmnopqrstuvwxyz123456'
+     ```
+
+3. **Configure Your API Key:**
+   - In your project directory, open the `config.json` file. Replace the value for `api_key` with your actual OpenAI API key.
+
+Here's an example of how the `config.json` file should look:
+
+```json
+{
+    "api_key": "sk-abcdefghijklmnopqrstuvwxyz123456"
+}
+
 
 ## Usage
 
