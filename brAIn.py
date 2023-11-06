@@ -121,20 +121,26 @@ def get_user_input():
 
     pygame.init()
     screen = pygame.display.set_mode((800, 600))
+    # Load the background image
+    background_image = pygame.image.load("./input.png")
+
     pygame.display.set_caption("Enter Your Initial Message")
     clock = pygame.time.Clock()
     font = pygame.font.Font(None, 36)
-    input_rect = pygame.Rect(200, 250, 400, 36)
+    input_rect = pygame.Rect(200, 300, 400, 36)
     color_inactive = pygame.Color('lightskyblue3')
-    color_active = pygame.Color('dodgerblue2')
+    color_active = pygame.Color('black')
     color = color_inactive
     active = False
     text = ''
     
     # Message to display above the input field
-    intro_message = "Type in your first thought. Which problem are you facing in your mind?"  # Your introductory message
-    intro_font = pygame.font.Font(None, 24)
-    intro_text = intro_font.render(intro_message, True, (255, 255, 255))
+    intro_message = "Type in your first thought. Which problem are you facing in your mind?"
+    intro_font = pygame.font.Font(None, 27)
+    intro_text = intro_font.render(intro_message, True, (0, 0, 0))
+    
+    # Define the background color for the input field with reduced opacity (e.g., 50)
+    input_field_background_color = (0, 0, 0, 50)
     
     while not input_complete:
         for event in pygame.event.get():
@@ -162,15 +168,26 @@ def get_user_input():
         txt_surface = font.render(text, True, color)
         width = max(200, txt_surface.get_width() + 10)
         input_rect.w = width
-        screen.blit(intro_text, (200, 200))  # Display the intro message
+        
+        # Draw a filled rectangle as the background for the input field with opacity
+        # pygame.draw.rect(screen, input_field_background_color, input_rect)
+
+        
+        
+        # Blit the background image on the screen
+        screen.blit(background_image, (0, 0))
+        
+        screen.blit(intro_text, (100, 250))  # Display the intro message
         screen.blit(txt_surface, (input_rect.x + 5, input_rect.y + 5))
-        pygame.draw.rect(screen, color, input_rect, 2)
+        pygame.draw.rect(screen, input_field_background_color, input_rect, 2)
         input_rect.x = 300
         pygame.display.flip()
         clock.tick(30)
 
     pygame.quit()
     return text
+
+
 # Function to load and parse the discussion from a text file
 def load_discussion(file_path):
     discussion = []
@@ -191,7 +208,7 @@ def display_conversation(initial_message, discussion, index):
 
     # Constants
     WIDTH, HEIGHT = 800, 600
-    WHITE = (255, 255, 255)
+    WHITE = (209, 202, 192)
     FONT_SIZE = 24
     FONT = pygame.font.Font(None, FONT_SIZE)
 
@@ -271,9 +288,9 @@ def display_conversation(initial_message, discussion, index):
         screen.fill(WHITE)
 
         # Draw areas for each part of the brain
-        pygame.draw.rect(screen, (200, 200, 200), ego_area)
-        pygame.draw.rect(screen, (200, 200, 200), super_ego_area)
-        pygame.draw.rect(screen, (200, 200, 200), id_area)
+        pygame.draw.rect(screen, (209, 202, 192), ego_area)
+        pygame.draw.rect(screen, (209, 202, 192), super_ego_area)
+        pygame.draw.rect(screen, (209, 202, 192), id_area)
 
 
         # If it's the first part of the conversation, display a start message

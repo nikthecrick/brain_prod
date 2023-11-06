@@ -1,4 +1,5 @@
-
+#Exclude openAI cache
+.cache
 
 # Exclude virtual environments (Python)
 venv/
