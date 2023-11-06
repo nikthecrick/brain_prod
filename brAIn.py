@@ -12,6 +12,23 @@ import json
 import pygame
 import sys
 
+# Function to load API key from the configuration file
+def load_api_key():
+    try:
+        with open('config.json', 'r') as config_file:
+            config = json.load(config_file)
+            return config.get('openai_api_key')
+    except (FileNotFoundError, json.JSONDecodeError):
+        return None
+
+# Load the OpenAI API key
+api_key = load_api_key()
+
+# Check if the API key was loaded successfully
+if api_key is None:
+    print("Error: OpenAI API key not found in the configuration file. Please check your configuration.")
+    exit(1)
+
 # Function to initiate and save the conversation
 def initiate_and_save_conversation():
     #human_input = input("Enter the initial message: ")
@@ -28,8 +45,8 @@ def initiate_and_save_conversation():
     config_list_gpt3 = [
         {
             'model': 'gpt-3.5-turbo-16k',
-            # enter your openAI API key here
-            'api_key': '',
+            # openAI API key
+            'api_key': api_key,
         }
     ]
 
