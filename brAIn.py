@@ -184,7 +184,7 @@ def get_user_input():
         pygame.display.flip()
         clock.tick(30)
 
-    pygame.quit()
+    #pygame.quit()
     return text
 
 
